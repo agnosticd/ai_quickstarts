@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  role_name: quickstart_deploy_via_make
+  author: Red Hat, ...
+  description: |
+    ...
+  license: MIT
+  min_ansible_version: "2.9"
+  platforms:
+  - linux
+  galaxy_tags:
+  - quickstart
+  - ai
+dependencies: []
