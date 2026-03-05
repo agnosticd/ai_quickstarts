@@ -6,23 +6,17 @@
 # To Do: Implement your workload deployment tasks here
 # -------------------------------------------------------------------------
 
-- name: Install podman
-  ansible.builtin.package:
-    name: podman
-    state: present
-  become: true
-
 - name: Clone the Lab repo
   ansible.builtin.git:
-    repo: "{{ quickstart_deploy_make_repo_url }}"
+    repo: "{{ quickstart_deploy_via_make_repo_url }}"
     dest: "~/quickstart-deploy-make-repo"
-    version: "{{ quickstart_deploy_make_branch }}"
+    version: "{{ quickstart_deploy_via_make_scm_ref }}"
 
 - name: Run make install
   community.general.make:
-    chdir: "~/quickstart-deploy-make-repo/{{ quickstart_deploy_make_directory }}"
+    chdir: "~/quickstart-deploy-make-repo/{{ quickstart_deploy_via_make_directory }}"
     target: install
-    params: "{{ quickstart_deploy_make_params }}"
+    params: "{{ quickstart_deploy_via_make_params }}"
 
 # Leave this as the last task in the playbook.
 # --------------------------------------------

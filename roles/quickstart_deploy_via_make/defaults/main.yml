@@ -1,15 +1,15 @@
 ---
-become_override: false
-ocp_username: system:admin
-silent: false
+# become_override: false
+# ocp_username: system:admin
+# silent: false
 
-quickstart_deploy_make_directory: 
+# Git Clone parameters
+quickstart_deploy_via_make_directory: 
 
 # Repository parameters
-quickstart_deploy_make_repo_url: 
-quickstart_deploy_make_branch: 
-
+quickstart_deploy_via_make_repo_url: 
+quickstart_deploy_via_make_scm_ref: 
 
 
 # Parameters passed to `make install` (key: value)
-quickstart_deploy_make_params:
+quickstart_deploy_via_make_params: []
