@@ -6,12 +6,6 @@
 # To Do: Implement your workload deployment tasks here
 # -------------------------------------------------------------------------
 
-- name: Install podman
-  ansible.builtin.package:
-    name: podman
-    state: present
-  become: true
-
 - name: Clone the Lab repo
   ansible.builtin.git:
     repo: "{{ quickstart_deploy_make_repo_url }}"
