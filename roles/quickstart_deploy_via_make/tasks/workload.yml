@@ -1,7 +1,7 @@
 ---
-- name: Setting up workload for user
+- name: Setting up quickstart_deploy_via_make workload
   debug:
-    msg: "Setting up workload for user ocp_username = {{ ocp_username }}"
+    msg: "Deploying {{ quickstart_deploy_via_make_repo_url }} ({{ quickstart_deploy_via_make_scm_ref }})"
 
 # To Do: Implement your workload deployment tasks here
 # -------------------------------------------------------------------------
@@ -23,4 +23,4 @@
 - name: workload tasks complete
   debug:
     msg: "Workload Tasks completed successfully."
-  when: not silent|bool
+  when: not silent | default(false) | bool
