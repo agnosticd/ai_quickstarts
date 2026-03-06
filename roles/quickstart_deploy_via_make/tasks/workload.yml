@@ -6,6 +6,13 @@
 # To Do: Implement your workload deployment tasks here
 # -------------------------------------------------------------------------
 
+- name: Log in to OpenShift cluster
+  ansible.builtin.command:
+    cmd: >-
+      oc login {{ openshift_api_url }}
+      --token={{ openshift_cluster_admin_token }}
+      --insecure-skip-tls-verify=true
+
 - name: Clone the Lab repo
   ansible.builtin.git:
     repo: "{{ quickstart_deploy_via_make_repo_url }}"
