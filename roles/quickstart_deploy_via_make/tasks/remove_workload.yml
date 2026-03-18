@@ -6,7 +6,7 @@
   community.general.make:
     chdir: "~/quickstart-deploy-make-repo/{{ quickstart_deploy_via_make_directory }}"
     target: uninstall
-    params: "{{ quickstart_deploy_via_make_params }}"
+    params: "{{ quickstart_deploy_via_make_scm_ref }}"
 
 # Leave this as the last task in the playbook.
 # --------------------------------------------
