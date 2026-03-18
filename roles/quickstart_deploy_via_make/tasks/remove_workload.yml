@@ -2,11 +2,11 @@
 # Implement your workload removal tasks here
 # ------------------------------------------
 
-- name: Run make install
+- name: Run make uninstall
   community.general.make:
-    chdir: "~/quickstart-deploy-make-repo/{{ quickstart_deploy_make_directory }}"
+    chdir: "~/quickstart-deploy-make-repo/{{ quickstart_deploy_via_make_directory }}"
     target: uninstall
-    params: "{{ quickstart_deploy_make_params }}"
+    params: "{{ quickstart_deploy_via_make_params }}"
 
 # Leave this as the last task in the playbook.
 # --------------------------------------------
