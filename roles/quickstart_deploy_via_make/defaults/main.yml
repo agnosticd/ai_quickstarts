@@ -12,4 +12,8 @@ quickstart_deploy_via_make_scm_ref:
 
 
 # Parameters passed to `make install` (key: value)
-quickstart_deploy_via_make_params: []
+quickstart_deploy_via_make_params: {}
+
+# Parameters passed to `make uninstall` (key: value)
+# Defaults to install params if not explicitly set
+quickstart_deploy_via_make_uninstall_params: "{{ quickstart_deploy_via_make_params }}"
