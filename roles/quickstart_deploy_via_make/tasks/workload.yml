@@ -21,7 +21,7 @@
 
 - name: Run make install
   community.general.make:
-    chdir: "~/quickstart-deploy-make-repo/{{ quickstart_deploy_via_make_directory }}"
+    chdir: "~/quickstart-deploy-make-repo/{{ quickstart_deploy_via_make_directory | default('') }}"
     target: install
     params: "{{ quickstart_deploy_via_make_params }}"
 
