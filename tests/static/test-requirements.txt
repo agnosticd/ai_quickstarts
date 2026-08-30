@@ -1,6 +1,6 @@
 ansible==12.1.0
 ansible-compat==25.8.2
-ansible-core==2.19.3
+ansible-core==2.19.11rc1
 ansible-lint==25.9.2
 appdirs==1.4.4
 astroid==3.3.11
